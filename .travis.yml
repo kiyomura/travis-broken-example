@@ -3,6 +3,15 @@ php:
   - 5.5
   - 5.4
   - hhvm
-script:
-  - ./.travis_scripts/build.sh
+
+script: 
+  - phpunit Test.php
+
+before_script:
+  - chmod +x ./.travis_scripts/attach_tag.sh
+  - chmod +x ./.travis_scripts/send_to_dropbox.sh
+
+after_success:
+  - ./.travis_scripts/attach_tag.sh
+  - ./.travis_scripts/upload_to_dropbox.sh
 
