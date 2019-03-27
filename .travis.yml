@@ -4,7 +4,8 @@ php:
   - 5.4
 
 script: 
-  - phpunit Test.php
+#  - phpunit Test.php
+  - ./.travis_scripts/attach_tag.sh
 
 before_script:
   - chmod +x ./.travis_scripts/attach_tag.sh
