@@ -1,4 +1,4 @@
-#!/bin/sh
+﻿#!/bin/sh
 
 CREDENTIAL_FILE="$HOME/.config/git-credential"
 mkdir -p $HOME/.config
