@@ -4,12 +4,7 @@ php:
   - 5.4
 
 script: 
-#  - phpunit Test.php
-  - ./.travis_scripts/build.sh
-
-before_script:
-  - chmod +x ./.travis_scripts/build.sh
-  - chmod +x ./.travis_scripts/upload_to_dropbox.sh
+  - ruby ./.travis_scripts/build.rb
 
 after_success:
   - ./.travis_scripts/upload_to_dropbox.sh
