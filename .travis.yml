@@ -4,7 +4,9 @@ php:
   - 5.4
 
 script: 
-  - ruby ./.travis_scripts/build.rb
+  - TRAVIS_TAG=`ruby ./.travis_scripts/build.rb`
+  - echo '------'
+  - echo $TRAVIS_TAG
 
 after_success:
   - ./.travis_scripts/upload_to_dropbox.sh
